@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Phil",
            family = "Hall",
            role = c("aut", "cre"),
-           email = "philip.hall@justice.gov.uk"
+           email = "philip.hall@justice.gov.uk")
 Description: This package contains functions to convert published MoJ CSVs to a Tidy Data format.
 License: OGL
 Encoding: UTF-8
