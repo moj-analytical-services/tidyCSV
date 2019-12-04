@@ -10,3 +10,9 @@ This package provides functions to convert published MoJ data into Tidy Data for
 This function will run on a Probation Caseload file, published in Offender Management Statistics Quarterly. An example can be found in the file *caseloadq1.csv* in this zip file: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/823450/CSVs.zip
 
 It also adds geographic data and additional breakdowns using lookup files stored in /data.
+
+## probationStarts
+
+This function will run on a Probation Caseload file, published in Offender Management Statistics Quarterly. An example can be found in the file *starts-q2-2019.csv* in this zip file: https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/843365/CSVs.zip
+
+It also adds geographic data and additional breakdowns using lookup files stored in /data.
