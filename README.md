@@ -1,10 +1,7 @@
-# tidyCSV
-
-Package for converting published MoJ CSVs to Tidy Data.
-
 # Overview
 
 This package provides functions to convert published MoJ data into Tidy Data format. The functions have been set up specifically to accept current published formats. Any change in how these files are published is likely to result in the package functions not working.
+
 
 # Available Functions
 
