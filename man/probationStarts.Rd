@@ -2,7 +2,7 @@
 % Please edit documentation in R/probation-starts.R
 \name{probationStarts}
 \alias{probationStarts}
-\title{Convert a Probation Starts CSV to Tidy format}
+\title{Convert a Probation Starts CSV to Tidy format data frame}
 \usage{
 probationStarts(file)
 }
@@ -13,5 +13,5 @@ probationStarts(file)
 A data frame of the input file in Tidy format
 }
 \description{
-Convert a Probation Starts CSV to Tidy format
+Convert a Probation Starts CSV to Tidy format data frame
 }

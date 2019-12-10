@@ -11,5 +11,6 @@ License: OGL
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    dplyr
+    dplyr,
+    lubridate
 RoxygenNote: 6.1.1

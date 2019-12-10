@@ -2,7 +2,7 @@
 % Please edit documentation in R/probation-caseload.R
 \name{probationCaseload}
 \alias{probationCaseload}
-\title{Convert a Probation Caseload CSV to Tidy format}
+\title{Convert a Probation Caseload CSV to Tidy format data frame}
 \usage{
 probationCaseload(file)
 }
@@ -13,5 +13,5 @@ probationCaseload(file)
 A data frame of the input file in Tidy format
 }
 \description{
-Convert a Probation Caseload CSV to Tidy format
+Convert a Probation Caseload CSV to Tidy format data frame
 }
