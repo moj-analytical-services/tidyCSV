@@ -22,19 +22,13 @@ probationCaseload <- function(file) {
     value_type <- "count"
   })
 
-  # Hard code some typos found in published data.
-
-  data$probation_area <- stringr::str_replace(data$probation_area,"SouthYorkshire CRC","South Yorkshire CRC")
-  data$probation_area <- stringr::str_replace(data$probation_area,"Kent, Surrey and Sussex CRC DATA CaseloadQ2","Kent, Surrey and Sussex CRC")
-  data$probation_area <- stringr::str_replace(data$probation_area,"Gloucetsershire, Avon and Somerset and Wiltshire CRC","Gloucestershire, Avon and Somerset and Wiltshire CRC")
-  data$probation_area <- stringr::str_replace(data$probation_area,"Northamptonshire, Bedfordshire, Hertfordshire and Cambridgshire CRC","Northamptonshire, Bedfordshire, Hertfordshire and Cambridgeshire CRC")
-
   # Use the two lookups stored in data/sysdata.rda to add additional detail.
   # Includes geographic codes and supervision types that are inconsistent between years.
 
   lookup <- tidyCSV::probation_areas
 
-  data <- merge(data,lookup,by="probation_area")
+  data <- merge(data,lookup,by.x="probation_area",by.y="probation_area_input",
+                suffixes=c("_old","_new"))
 
   lookup <- tidyCSV::supervision_types
 
@@ -43,7 +37,7 @@ probationCaseload <- function(file) {
 
   # Keep the final variable set.
 
-  data <- dplyr::select(data,start_date,end_date,probation_area,nps_crc,nps_region,CTRY18CD,CTRY18NM,
+  data <- dplyr::select(data,start_date,end_date,probation_area = probation_area_new,nps_crc,nps_region,CTRY18CD,CTRY18NM,
                  sex,supervision_type = supervision_type_new,value_description,value_type,value)
 
   return(data)
